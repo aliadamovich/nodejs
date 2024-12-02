@@ -11,8 +11,11 @@ const requestCountMiddleware = (req: Request, res: Response, next: NextFunction)
 	requestCount++
 	next()
 }
+app.get("/", (req, res) => {
+	res.redirect("/products")
+})
 
-app.use(requestCountMiddleware)
+// app.use(requestCountMiddleware)
 app.use('/products', productsRoute)
 console.log(requestCount)
 
