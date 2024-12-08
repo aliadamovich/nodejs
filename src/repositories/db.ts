@@ -1,6 +1,10 @@
 import { MongoClient } from "mongodb";
+import mongoose from 'mongoose';
 
-const mongoUri = process.env.MONGO_URL || "mongodb://0.0.0.0:27017/?maxPoolSize=20&w=majority";
+const mongoUri =
+	process.env.MONGO_URL ||
+	"mongodb+srv://admin:789654@cluster0.fwwvp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+// mongoose.connect('')
 
 export const client = new MongoClient(mongoUri);
 
