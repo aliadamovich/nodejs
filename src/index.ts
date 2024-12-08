@@ -12,7 +12,7 @@ const requestCountMiddleware = (req: Request, res: Response, next: NextFunction)
 	next()
 }
 app.get("/", (req, res) => {
-	res.send("Hello hello")
+	res.redirect("/products")
 })
 
 // app.use(requestCountMiddleware)
@@ -25,6 +25,6 @@ const startApp = async () => {
 		console.log(`Example app listening on port ${port}`)
 	})
 }
-startApp()
+startApp() 
 
 export default app;
