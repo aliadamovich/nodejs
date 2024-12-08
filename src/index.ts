@@ -12,7 +12,7 @@ const requestCountMiddleware = (req: Request, res: Response, next: NextFunction)
 	next()
 }
 app.get("/", (req, res) => {
-	res.redirect("/products")
+	res.send("Hello hello")
 })
 
 // app.use(requestCountMiddleware)

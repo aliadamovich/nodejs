@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const mongoUri = process.env.mongoURI || "mongodb://0.0.0.0:27017/?maxPoolSize=20&w=majority";
+const mongoUri = process.env.MONGO_URL || "mongodb://0.0.0.0:27017/?maxPoolSize=20&w=majority";
 
 export const client = new MongoClient(mongoUri);
 
