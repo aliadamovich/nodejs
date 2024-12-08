@@ -5,6 +5,7 @@ export const productsRoute = Router()
 
 productsRoute.get("/", async (req, res) => {
 	const foundProduct = await productsRepository.findProducts(req.query.title?.toString())
+	console.log("Received request for /products")
 		res.send(foundProduct)
 })
 
