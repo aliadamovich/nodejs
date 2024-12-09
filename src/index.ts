@@ -7,7 +7,8 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 
 app.get("/", (req, res) => {
-	res.redirect("/products")
+	// res.redirect("/products")
+	res.send('hi hi')
 })
 
 app.use('/products', productsRoute)
