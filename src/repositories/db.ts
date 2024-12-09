@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 const mongoUri =
 	process.env.MONGO_URL ||
-	"mongodb+srv://admin:789654@cluster0.fwwvp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+	"mongodb+srv://admin:789654@cluster0.fwwvp.mongodb.net/products?retryWrites=true&w=majority"
 // mongoose.connect('')
 
 export const client = new MongoClient(mongoUri);
