@@ -1,9 +1,12 @@
 import express, {NextFunction, Request, Response} from 'express'
 import { productsRoute } from './routes/products-route'
 import { runDB } from './repositories/db'
+import cors from "cors"
+
 
 const app = express()
 const port = process.env.PORT || 3000
+app.use(cors())
 app.use(express.json())
 
 app.get("/", (req, res) => {
